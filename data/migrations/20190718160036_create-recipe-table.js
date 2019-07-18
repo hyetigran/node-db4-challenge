@@ -11,9 +11,8 @@ exports.up = function(knex) {
       table.increments();
       table
         .text("name", 128)
-        .unqiue()
+        .unique()
         .notNullable();
-      table.float("amount", 2, 2);
     })
     .createTable("recipeDetails", table => {
       table.increments();
